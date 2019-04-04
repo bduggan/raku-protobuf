@@ -89,8 +89,8 @@ regex boolLit {
 
 # strLit = ( "'" { charValue } "'" ) |  ( '"' { charValue } '"' )
 regex strLit {
-  | "'" <charValue>* "'"
-  | '"' <charValue>* '"'
+  | "'" <.charValue>* "'"
+  | '"' <.charValue>* '"'
 }
 
 # charValue = hexEscape | octEscape | charEscape | /[^\0\n\\]/
@@ -289,4 +289,12 @@ rule topLevelDef {
  <message> | <enum> | <service>
 }
 
+rule TOP {
+  [ \s
+    | [ '//' \V* [$|\n] ]
+  ]*
+  <proto>
 }
+
+}
+
