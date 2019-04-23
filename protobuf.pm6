@@ -29,7 +29,7 @@ regex ident {
 }
 
 # fullIdent = ident { "." ident }
-regex fullIdent { <ident> [ '.' <ident> ]* }
+regex fullIdent { <ident>+ % '.' }
 
 # messageName = ident
 # enumName = ident
