@@ -139,7 +139,7 @@ rule syntax {
 
 # import = "import" [ "weak" | "public" ] strLit ";" </pre>
 rule import {
-  import [ weak | public ] <strLit> ';'
+  import [ weak | public | "" ] <strLit> ';'
 }
 
 # package = "package" fullIdent ";"
