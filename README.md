@@ -1,15 +1,15 @@
 protobuf
 --------
 
-Experiments with parsing the protobuf format.
+Parse protobufs with Raku
 
 tl;dr
 ------
 ```
-brew install perl6
+brew install raku
 zef install Grammar::PrettyErrors
-./test.p6
-./protoc.p6 eg/helloworld.proto
+./test.raku
+./protoc.raku eg/helloworld.proto
 ```
 
 see also
